@@ -1,4 +1,5 @@
 // import { useState, useEffect } from "react";
+import Header from "../components/Header";
 // import axios from "axios";
 // import styled from "styled-components";
 
@@ -11,9 +12,13 @@ export default function Home() {
     //             // axios.get("")
     //         setPosts(res.data);
     //     }
+    //     fetchPosts();
     // }, []);
 
   return (
-    <div>Home</div>
+    <>
+        <Header/>
+        <div>Home</div>
+    </>
   )
 }
