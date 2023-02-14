@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function Post({post}) {
   return (
     <StyledPost>
         <StyledPostInfo>
-            <StyledPostTitle>{post.title}</StyledPostTitle>
+            <Link to={`/post/${post._id}`} className="link">
+                <StyledPostTitle>{post.title}</StyledPostTitle>
+            </Link>
             <hr/>
             <StyledPostDate>{new Date(post.createdAt).toDateString()}</StyledPostDate>
         </StyledPostInfo>
