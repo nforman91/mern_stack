@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Header() {
   return (
     <StyledHeader>
-        <StyledHeaderTitle>Blog</StyledHeaderTitle>
+        <StyledHeaderTitle>Nate's Blog</StyledHeaderTitle>
         <StyledHeaderImg src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/440px-Image_created_with_a_mobile_phone.png" alt="phone pic"/>
     </StyledHeader>
   )

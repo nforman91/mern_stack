@@ -20,7 +20,7 @@ export default function Topbar() {
             </StyledTopList>
         </StyledTopCenter>
         <StyledTopRight>
-            Topright
+            
         </StyledTopRight>
     </StyledTop>
   )
