@@ -27,8 +27,8 @@ export default function SinglePost() {
             }
             <StyledSinglePostTitle>{post.title}</StyledSinglePostTitle>
             <StyledSinglePostInfo>
-                <span className="singlePostAuthor">Author: <b>{post.username}</b></span>
-                <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
+                <StyledSinglePostAuthor>Author: <b>{post.username}</b></StyledSinglePostAuthor>
+                <StyledSinglePostDate>{new Date(post.createdAt).toDateString()}</StyledSinglePostDate>
             </StyledSinglePostInfo>
             <StyledSinglePostDesc>{post.desc}</StyledSinglePostDesc>
         </StyledSinglePostWrapper>
@@ -51,12 +51,21 @@ const StyledSinglePostTitle = styled.h1`
     font-size: 20px;
 `;
 
+
+
 const StyledSinglePostInfo = styled.div`
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
     color: #ba9656;
+`;
+
+const StyledSinglePostAuthor = styled.div`
+`;
+
+const StyledSinglePostDate = styled.div`
+    margin-right: 20px;
 `;
 
 const StyledSinglePostDesc = styled.p`
