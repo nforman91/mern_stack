@@ -12,6 +12,7 @@ export default function Post({post}) {
                 <StyledPostTitle>{post.title}</StyledPostTitle>
             </Link>
             <hr/>
+            <StyledPostAuthor>Author: {post.username}</StyledPostAuthor>
             <StyledPostDate>{new Date(post.createdAt).toDateString()}</StyledPostDate>
         </StyledPostInfo>
         <StyledPostDesc>{post.desc}</StyledPostDesc>
@@ -35,6 +36,11 @@ const StyledPostTitle = styled.span`
     font-weight: 700;
     margin-top: 15px;
     cursor: pointer;
+`;
+
+const StyledPostAuthor = styled.div`
+    font-size: 15px;
+    color: #999;
 `;
 
 const StyledPostDate = styled.span`
