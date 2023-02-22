@@ -31,7 +31,7 @@ export default function Write() {
 
         //     }
         // }
-        axios.post("http://localhost:8000/api/posts/", newPost);
+        await axios.post("http://localhost:8000/api/posts/", newPost);
     }
 
   return (
