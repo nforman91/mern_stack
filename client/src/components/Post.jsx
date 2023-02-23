@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export default function Post({post}) {
-    const PF = "http://localhost:8000/images";
+    const PF = "http://localhost:8000/images/";
 
   return (
     <StyledPost>

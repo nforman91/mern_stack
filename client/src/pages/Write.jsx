@@ -13,25 +13,21 @@ export default function Write() {
             title, 
             desc, 
         };
-        // if(file){
-        //     const data = new FormData();
-        //     const filename = Date.now() + file.name;
-        //     data.append("name", filename);
-        //     data.append("file", file);
-        //     newPost.photo = filename;
-        //     try{
-        //         await axios.post("http://localhost:8000/api/upload", data);
-        //     }catch(err){
-
-        //     }
-        //     try{
-        //         const res = await axios.post("http://localhost:8000/api/posts", newPost);
-        //         window.location.replace("http://localhost:8000/api/posts" + res.data._id);
-        //     }catch(err){
-
-        //     }
-        // }
-        await axios.post("http://localhost:8000/api/posts/", newPost);
+        if(file){
+            const data = new FormData();
+            const filename = Date.now() + file.name;
+            data.append("name", filename);
+            data.append("file", file);
+            newPost.photo = filename;
+            try{
+                await axios.post("http://localhost:8000/api/upload", data);
+            }catch(err){}
+            }
+        try{
+                const res = await axios.post("http://localhost:8000/api/posts", newPost);
+                window.location.replace("http://localhost:8000/api/post/" + res.data._id);
+            }catch(err){}
+        // await axios.post("http://localhost:8000/api/posts/", newPost);
     }
 
   return (
